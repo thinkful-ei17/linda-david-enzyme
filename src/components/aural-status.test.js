@@ -15,3 +15,11 @@ describe('<AuralStatus />', () => {
     expect(wrapper.find("p").text()).toEqual('hello');
   })
 })
+
+//SOLUTION
+// it('Renders an aural status update', () => {
+//   let TEST_STATUS = 'You are listening to a game!';
+  
+//   let wrapper = shallow(<AuralStatus auralStatus={TEST_STATUS} />);
+//   expect(wrapper.contains(TEST_STATUS)).toEqual(true);
+// });

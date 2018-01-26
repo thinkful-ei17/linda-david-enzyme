@@ -15,3 +15,6 @@ describe('<Header />', () => {
     expect(wrapper.contains(TopNav)).toEqual(true)
   })
 })
+
+//SOLUTION
+//Only need smoke test

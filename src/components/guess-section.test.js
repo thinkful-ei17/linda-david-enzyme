@@ -17,3 +17,6 @@ describe('<GuessSection />', () => {
     expect(wrapper.contains(GuessForm)).toEqual(true)
   })
 })
+
+//SOLUTION
+//only need smoke test

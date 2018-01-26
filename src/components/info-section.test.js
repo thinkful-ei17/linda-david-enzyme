@@ -23,3 +23,6 @@ describe('<InfoSection />', () => {
   </section>)).toEqual(true)
   })
 })
+
+//SOLUTION
+//only needed smoke test
