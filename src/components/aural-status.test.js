@@ -11,7 +11,7 @@ describe('<AuralStatus />', () => {
   it('Should render correct props', () => {
     const auralStatus = 'hello';
     const wrapper = shallow(<AuralStatus auralStatus={auralStatus} />);
-    console.log(wrapper.debug());
+    // console.log(wrapper.debug());
     expect(wrapper.find("p").text()).toEqual('hello');
   })
 })

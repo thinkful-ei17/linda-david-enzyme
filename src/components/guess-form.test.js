@@ -12,17 +12,15 @@ describe('<GuessForm />', () => {
 // expect(wrapper.ref('secondRef').prop('amount')).to.equal(4);
 // expect(wrapper.ref('secondRef').text()).to.equal('Second');
 
-  // it('Should fire the onMakeGuess callback when the form is submitted', () => {
-  //   const mockedEvent = { target: {} }
-  //   const callback = jest.fn();
-  //   const wrapper = mount(<GuessForm onSubmit={callback}/>);
-  //   const guess = 1;
-  //   console.log(wrapper.debug());
-  //   wrapper.instance().onSubmit(mockedEvent).simulate('submit', {preventDefault() {} });;
-  //   wrapper.find('input').ref(guess).prop('input').to.equal(guess);
-  //   expect(callback).toHaveBeenCalledWith(guess);
-  // })
-
- 
-
+  it('Should fire the onMakeGuess callback when the form is submitted', () => {
+    const mockedEvent = { target: {} }
+    const callback = jest.fn();
+    const wrapper = mount(<GuessForm onMakeGuess={callback}/>);
+    const guess = 1;
+    // console.log(wrapper.debug());
+    wrapper.find('input[type="number"]').instance().value = guess;
+    wrapper.simulate('submit');
+    // wrapper.find('input').ref(guess).prop('input').toEqual(guess);
+    expect(callback).toHaveBeenCalledWith(guess.toString());
+  })
 })
