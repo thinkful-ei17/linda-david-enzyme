@@ -12,6 +12,6 @@ describe('<Feedback />', () => {
     const count = 5;
     const feedback = 'hello';
     const wrapper = shallow(<Feedback guessCount={count} feedback={feedback} />);
-    expect(wrapper.contains(<h2></h2>))
+    expect(wrapper.find("h2").text()).toEqual('hello Guess again!')
   })
 })

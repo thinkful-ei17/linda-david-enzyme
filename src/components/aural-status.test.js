@@ -12,12 +12,6 @@ describe('<AuralStatus />', () => {
     const auralStatus = 'hello';
     const wrapper = shallow(<AuralStatus auralStatus={auralStatus} />);
     console.log(wrapper.debug());
-    expect(wrapper.contains(<p>{auralStatus}</p>)).toEqual(true);
+    expect(wrapper.find("p").text()).toEqual('hello');
   })
 })
-
-// it('Renders the title', () => {
-//   const title = 'Foo';
-//   const wrapper = shallow(<Board title={title} />);
-//   expect(wrapper.contains(<h2>{title}</h2>)).toEqual(true);
-// });
