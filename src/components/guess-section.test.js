@@ -1,6 +1,7 @@
 import React from 'react';
 import GuessSection from './guess-section';
 import Feedback from './feedback';
+import GuessForm from './guess-form';
 import { shallow, mount } from 'enzyme';
 import './configureTests';
 
@@ -9,13 +10,10 @@ describe('<GuessSection />', () => {
     shallow(<GuessSection />)
   })
 
-  it('Should render correct props', () => {
-    
-    const feedback = 'hello';
-    const guessCount = 5;
-    const wrapper = mount(<GuessSection feedback={feedback} guessCount={guessCount} />);
+  it('Should render correct components', () => {
+    const wrapper = mount(<GuessSection/>);
     // console.log(wrapper.debug());
-    // check if Feedback and Guessform components render
     expect(wrapper.contains(Feedback)).toEqual(true)
+    expect(wrapper.contains(GuessForm)).toEqual(true)
   })
 })
